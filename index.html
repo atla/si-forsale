@@ -138,12 +138,12 @@
     </ul>
 
     <p>
-      <a class="cta" href="mailto:koerner.marcus@gmail.com?subject=Domain%20inquiry%3A%20secr.si%20%2F%20ecst.si">
+      <a class="cta" id="cta" href="mailto:buy@secr.si?subject=Domain%20inquiry%3A%20secr.si%20%2F%20ecst.si">
         Inquire to buy →
       </a>
     </p>
     <p class="note">
-      Or email <a href="mailto:koerner.marcus@gmail.com">koerner.marcus@gmail.com</a>
+      Email <a id="mail" href="mailto:buy@secr.si">buy@secr.si</a>
       with the domain and your offer.
     </p>
 
@@ -159,6 +159,16 @@
         document.title = host + " — for sale";
         var link = document.querySelector('link[rel="canonical"]');
         if (link) link.href = "https://" + host + "/";
+        var addr = "buy@" + host;
+        var cta = document.getElementById("cta");
+        var mail = document.getElementById("mail");
+        if (cta) {
+          cta.href = "mailto:" + addr + "?subject=" + encodeURIComponent("Domain inquiry: " + host);
+        }
+        if (mail) {
+          mail.href = "mailto:" + addr;
+          mail.textContent = addr;
+        }
       }
     })();
   </script>

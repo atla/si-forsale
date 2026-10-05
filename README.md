@@ -28,4 +28,4 @@ GitHub Pages custom domain is set to `secr.si`. For `ecst.si`, either:
 2. Create a registrar URL redirect from `ecst.si` → `https://secr.si/`, or
 3. Duplicate this repo with `CNAME` = `ecst.si` and enable Pages there.
 
-Contact on the page: koerner.marcus@gmail.com
+Contact on the page: buy@secr.si / buy@ecst.si
