@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Domains for sale — secr.si &amp; ecst.si</title>
+  <meta name="description" content="Premium .si domains for sale: secr.si (secrecy) and ecst.si (ecstasy). Inquire to purchase." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://secr.si/" />
+  <style>
+    :root {
+      --bg: #0c0c0d;
+      --fg: #f2efe8;
+      --muted: #9a958c;
+      --line: #2a2926;
+      --accent: #c9a86a;
+      --card: #141413;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { min-height: 100%; }
+    body {
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 3rem 1.5rem 2.5rem;
+      max-width: 42rem;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+    h1 {
+      font-size: clamp(1.75rem, 5vw, 2.35rem);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 28rem;
+      margin-bottom: 2.5rem;
+    }
+    .domains {
+      list-style: none;
+      display: grid;
+      gap: 0.85rem;
+      margin-bottom: 2.5rem;
+    }
+    .domains li {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 1.15rem 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.35rem 1rem;
+    }
+    .domains li.active {
+      border-color: var(--accent);
+      box-shadow: inset 0 0 0 1px rgba(201, 168, 106, 0.25);
+    }
+    .name {
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 1.35rem;
+      letter-spacing: -0.03em;
+    }
+    .name .tld { color: var(--accent); }
+    .gloss {
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .cta {
+      display: inline-block;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      color: var(--bg);
+      background: var(--fg);
+      padding: 0.85rem 1.25rem;
+      border-radius: 2px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .cta:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+    .note {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .note a { color: var(--muted); }
+    footer {
+      margin-top: auto;
+      padding-top: 3rem;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #5c5850;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="eyebrow">Premium · .si</p>
+    <h1>These domains are for sale.</h1>
+    <p class="lead">Short Slovenian ccTLDs that read as English words when spoken. Serious inquiries welcome.</p>
+
+    <ul class="domains" id="domains">
+      <li data-host="secr.si">
+        <span class="name">secr<span class="tld">.si</span></span>
+        <span class="gloss">secrecy</span>
+      </li>
+      <li data-host="ecst.si">
+        <span class="name">ecst<span class="tld">.si</span></span>
+        <span class="gloss">ecstasy</span>
+      </li>
+    </ul>
+
+    <p>
+      <a class="cta" href="mailto:koerner.marcus@gmail.com?subject=Domain%20inquiry%3A%20secr.si%20%2F%20ecst.si">
+        Inquire to buy →
+      </a>
+    </p>
+    <p class="note">
+      Or email <a href="mailto:koerner.marcus@gmail.com">koerner.marcus@gmail.com</a>
+      with the domain and your offer.
+    </p>
+
+    <footer>For sale · not affiliated with ARNES / register.si</footer>
+  </main>
+  <script>
+    (function () {
+      var host = (location.hostname || "").toLowerCase().replace(/^www\./, "");
+      document.querySelectorAll("#domains li").forEach(function (li) {
+        if (li.getAttribute("data-host") === host) li.classList.add("active");
+      });
+      if (host === "secr.si" || host === "ecst.si") {
+        document.title = host + " — for sale";
+        var link = document.querySelector('link[rel="canonical"]');
+        if (link) link.href = "https://" + host + "/";
+      }
+    })();
+  </script>
+</body>
+</html>
